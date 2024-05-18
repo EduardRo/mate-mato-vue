@@ -1,20 +1,20 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+export default{
+  name:'App'
+}
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <nav>
+      <router-link to="/">Home</router-link>
+      <router-link to="/hello">Hello</router-link>
+      <router-link to="/about">About</router-link>
+    </nav>
+    <router-view />
+  
+  </header> 
+  
 </template>
 
 <style scoped>
@@ -43,5 +43,11 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
+}
+nav {
+  margin-bottom: 1rem;
+}
+nav a {
+  margin-right: 1rem;
 }
 </style>
