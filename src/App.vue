@@ -10,6 +10,7 @@ export default{
       <router-link to="/">Home</router-link>
       <router-link to="/hello">Hello</router-link>
       <router-link to="/about">About</router-link>
+      <router-link to="/clase">Clase</router-link>
     </nav>
     <router-view />
   
@@ -29,7 +30,7 @@ header {
 
 @media (min-width: 1024px) {
   header {
-    display: flex;
+    /* display: flex; */
     place-items: center;
     padding-right: calc(var(--section-gap) / 2);
   }
