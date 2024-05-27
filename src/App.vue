@@ -10,7 +10,7 @@ export default{
       <router-link to="/">Home</router-link>
       <router-link to="/hello">Hello</router-link>
       <router-link to="/about">About</router-link>
-      <router-link to="/clase">Clase</router-link>
+      <router-link :to="{name:'Clase'}">Clase</router-link>
     </nav>
     <router-view />
   
