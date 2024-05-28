@@ -1,21 +1,13 @@
-<script>
-import PrincipalMenu from './components/Menus/PrincipalMenu.vue';
-
-export default{
-  name:'App',
-  components:{PrincipalMenu}
-}
-</script>
-
 <template>
-  <header>
-   <PrincipalMenu v-if="$route.name === 'Home'" />
-   
-  
-  </header> 
-  <router-view />
-</template>
+    <nav>
+        <router-link to="/">Home</router-link>
+        <router-link :to="{name:'Clase'}">Teste</router-link>
+        <router-link to="/teorie">Teorie</router-link>
+        <router-link to="/despre">Despre</router-link>
+    </nav>
 
+
+</template>
 <style scoped>
 header {
   line-height: 1.5;

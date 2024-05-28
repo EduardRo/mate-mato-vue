@@ -2,7 +2,7 @@
 
 <template>
   <div class="greetings">
-    <h1 class="green">This is about!</h1>
+    <h1 class="green">Despre!</h1>
     <h3>
       You’ve successfully created a project with
       
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'About'
+  name: 'Despre'
 };
 </script>
 
