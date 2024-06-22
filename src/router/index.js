@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../components/Home.vue';
-import Teorie from '../components/Teorie.vue';
-import Despre from '../components/Despre.vue';
-import ClaseMenu from '../components/ClaseMenu.vue';
-import MateriiMenu from '../components/MateriiMenu.vue';
-import Test from '../components/Test.vue';
+import Home from '../pages/Home.vue';
+import Teorie from '../pages/Teorie.vue';
+import Despre from '../pages/Despre.vue';
+import ClaseMenu from '../pages/ClaseMenu.vue';
+import MateriiMenu from '../pages/MateriiMenu.vue';
+import Test from '../pages/Test.vue';
 
 const routes = [
   {
