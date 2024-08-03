@@ -1,18 +1,18 @@
-<!-- components/Quiz.vue -->
+<script setup>
+import { ref } from 'vue';
+const props = defineProps({
+    questions: Object
+});
+
+const count = ref(0);
+</script>
+
 <template>
-    <div>
-      <h2>Quiz Component</h2>
-      <p>This is a simple quiz component.</p>
+    <h1>This is a Quiz component</h1>
+    <div v-if="questions">
+        <p>{{ questions.enunt }}</p>
+        <p>{{ questions.v1 }}</p>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'Quiz',
-  };
-  </script>
-  
-  <style scoped>
-  /* Add your styles here */
-  </style>
-  
+
+    <button @click="count++">You clicked me {{ count }} times.</button>
+</template>

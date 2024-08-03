@@ -11,9 +11,10 @@
         
         </button>
     </div>
-    <div><div>
-            <Quiz  />
-        </div></div>
+    <div>
+    
+            <Quiz :questions="items[0]"  />
+    </div>
 
 </template>
 <script>
