@@ -8,12 +8,20 @@ export default{
 </script>
 
 <template>
+  <div class="flex flex-col h-screen">
   <header>
-   <PrincipalMenu v-if="$route.name === 'Home'" />
+    <div >
+      <PrincipalMenu v-if="$route.name === 'Home'" />
+    </div>
+   
    
   
   </header> 
-  <router-view />
+  <body class="flex-grow">
+    <router-view />
+  </body>
+</div>
+  
 </template>
 
 <style scoped>

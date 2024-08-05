@@ -3,17 +3,16 @@ import { defineStore } from 'pinia'
 export const useQuizStore = defineStore('quiz', {
   state: () => ({
     answers: {},
-    question: 0
+    questionNumber: 0
   }),
   actions: {
     addAnswer(questionId, answer) {
       this.answers[questionId] = answer
     },
-    newQuestion(question) {
-        // this move to next question
-        question++;
-        return question
+    nextQuestion() {
+      this.questionNumber++;
     },
+    
     calculateScore() {
       let score = 0
       for (const questionId in this.answers) {
