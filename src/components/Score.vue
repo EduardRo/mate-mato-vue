@@ -21,6 +21,7 @@
     <br><br> 
     <div>Total:{{totalScore}}</div>
        <br><br> 
+    <button @click="submitArray">Submit</button>
 </div>
 
 
@@ -31,6 +32,7 @@
 
 import { ref } from 'vue';
 import {useQuizStore} from '../stores/quiz.js';
+import axios from 'axios';
 
 const quizStore = useQuizStore();
 let totalScore = 0;
@@ -43,6 +45,15 @@ const calculatedScore = (answer) => {
     return 0;}
   
   
+};
+
+const submitArray = async () => {
+  try {
+    const response = await axios.post('http://127.0.0.1:8000/api/submit-array', quizStore.answers.value);
+    console.log('Response:', response.data);
+  } catch (error) {
+    console.error('Error submitting array:', error);
+  }
 };
 
 
