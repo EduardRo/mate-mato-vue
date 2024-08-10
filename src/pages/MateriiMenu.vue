@@ -44,7 +44,8 @@
     mounted(){
         
         console.log(this.codclasa);
-        axios.get(`http://127.0.0.1:8000/api/serii/${this.$route.params.codclasa}`).then(response =>{this.items=response.data;})
+        axios.get(`http://127.0.0.1:8000/api/serii/${this.$route.params.codclasa}`)
+        .then(response =>{this.items=response.data;})
         .catch(error=>{console.error('Error fetching items', error);});
         console.log(this.items)
         
